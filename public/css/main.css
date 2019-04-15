@@ -1,0 +1,175 @@
+#menuButton {
+  transition: all 0.5s ease-out;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top: 5px;
+  padding: 10px 10px 5px 10px;
+  cursor: pointer; }
+  #menuButton .line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  #menuButton.close {
+    transform: rotate(180deg); }
+    #menuButton.close .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    #menuButton.close .line:nth-child(2) {
+      opacity: 0; }
+    #menuButton.close .line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px); }
+  #menuButton:hover .line {
+    width: 30px;
+    height: 4px;
+    background-color: #F4A261; }
+  #menuButton:hover.close .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); }
+  #menuButton:hover.close .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px); }
+
+#flyoutMenu {
+  visibility: hidden;
+  position: fixed;
+  width: 100px;
+  padding-top: 4rem;
+  overflow: hidden;
+  transform: translate3d(50vw, 0, 0); }
+  #flyoutMenu.show {
+    visibility: visible;
+    height: 100vh;
+    background-color: rgba(5, 5, 5, 0.9);
+    opacity: 0.8; }
+  #flyoutMenu #menu {
+    list-style: none;
+    transition: all 0.5s ease-out; }
+  #flyoutMenu .menu-item {
+    background-color: rgba(5, 5, 5, 0);
+    text-align: center;
+    transition: all 0.5s ease-out; }
+    #flyoutMenu .menu-item.show {
+      transform: translate3d(0, 0, 0); }
+  #flyoutMenu .menu-link {
+    transition: all 0.5s ease-out;
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none; }
+    #flyoutMenu .menu-link:hover {
+      color: #df6b10; }
+    #flyoutMenu .menu-link.current {
+      color: #df6b10; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F4A261;
+  color: #fff;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5; }
+
+header {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 50px;
+  background: rgba(5, 5, 5, 0.5);
+  border: none; }
+
+main {
+  margin: 0;
+  padding-top: 50px; }
+
+h1,
+h2 {
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading {
+    font-size: 6rem;
+    color: #fff; }
+  h1.sm-heading,
+  h2.sm-heading {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    color: #fff;
+    background: rgba(5, 5, 5, 0.5); }
+
+.home {
+  height: 100vh;
+  padding: 30pt; }
+  .home .icons {
+    margin: 0;
+    margin-top: 1rem; }
+    .home .icons a {
+      padding: 0.5rem;
+      color: #fff;
+      transition: all 0.5s ease-out; }
+      .home .icons a:hover {
+        color: rgba(5, 5, 5, 0.8); }
+  .home h1 {
+    padding-top: 20vh; }
+  .home h2 {
+    padding: 10px; }
+
+@media screen and (min-width: 1171px) {
+  main .lg-heading {
+    line-height: 1;
+    vertical-align: middle;
+    margin-bottom: 1rem; }
+  #flyoutMenu.show {
+    transform: translate3d(60vw, 0, 0);
+    width: 40%; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  main .lg-heading {
+    line-height: 1;
+    vertical-align: middle;
+    margin-bottom: 1rem; }
+  #flyoutMenu.show {
+    transform: translate3d(40vw, 0, 0);
+    width: 60%; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  #flyoutMenu {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    #flyoutMenu.show {
+      transform: translate3d(0, 0, 0);
+      width: 100%; } }
+
+@media screen and (max-width: 400px) {
+  main {
+    padding: 2rem; }
+    main h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  #flyoutMenu {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    #flyoutMenu.show {
+      transform: translate3d(0, 0, 0);
+      width: 100%; } }
