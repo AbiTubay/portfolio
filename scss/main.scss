@@ -10,8 +10,6 @@ html {
 }
   
 body {
-    margin: 0;
-    padding: 0;
     background: $home-color;
     color: $primary-color;
     height: 100vh;
@@ -36,7 +34,8 @@ main {
 }
 
 h1,
-h2 {
+h2, 
+h3 {
     font-weight: 400;
 
     &.lg-heading {
@@ -52,11 +51,13 @@ h2 {
     }
 }
 
+
+//------------- HOME SECTION -----------//
 .home {
     height: 100vh;
     padding: 30pt;
     .icons {
-        margin: 0;
+        margin: 10px;
         margin-top: 1rem;
         a {
             padding: 0.5rem;
@@ -74,5 +75,26 @@ h2 {
         padding: 10px;
     }
 }
+
+
+//---------- ABOUT SECTION -----------//
+.about{
+    margin: 0;
+    padding: 0;
+}
+
+//---------- WORK SECTION -----------//
+.work{
+    margin: 0;
+    padding: 0;
+}
+
+//---------- CONTACTS SECTION -----------//
+.contact{
+    align-items: center;
+    text-align: center;
+}
+
+
 
 @import 'mobile';

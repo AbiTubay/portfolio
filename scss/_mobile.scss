@@ -28,8 +28,8 @@
 
     #flyoutMenu {
         &.show {
-          transform: translate3d(40vw, 0, 0);
-          width: 60%;
+          transform: translate3d(60vw, 0, 0);
+          width: 40%;
         }
       }
 }
@@ -46,11 +46,8 @@
         }
     }
   
+    //make menu full width
     #flyoutMenu {
-      float: none;
-      width: 100%;
-      min-height: 0;
-  
       &.show {
         transform: translate3d(0, 0, 0);
         width: 100%;
@@ -72,11 +69,8 @@
         }
     }
 
+    //make menu full width
     #flyoutMenu {
-      float: none;
-      width: 100%;
-      min-height: 0;
-  
       &.show {
         transform: translate3d(0, 0, 0);
         width: 100%;
